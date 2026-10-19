@@ -384,9 +384,7 @@ function showMechanics() {
 const teamMembers = [
   { img: "https://i.imgur.com/oqxZheO.jpeg", name: "EDIT NAME 1" },
   { img: "https://i.imgur.com/VgwmDli.jpeg", name: "EDIT NAME 2" },
-  { img: "https://i.imgur.com/kISEJMu.jpeg", name: "EDIT NAME 3" },
   { img: "https://i.imgur.com/WKiTxHq.jpeg", name: "EDIT NAME 4" },
-  { img: "https://i.imgur.com/UAp3m10.jpeg", name: "EDIT NAME 5" },
   { img: "https://i.imgur.com/WExMpTf.jpeg", name: "EDIT NAME 6" },
 ];
 function mkImg(src, onFail) {
@@ -583,7 +581,7 @@ const BANKS = {
 };
 const norm = s => String(s).toLowerCase().replace(/\s+/g, '').replace(/sqrt|root/g, '√').replace(/[−–]/g, '-');
 const checkAnswer = (raw, q) => q.placeholder || norm(raw) === norm(q.answer);
-const IMG_OK = 'https://i.imgur.com/fxNyXoU.jpeg', IMG_BAD = 'https://i.imgur.com/DFAaqrC.jpeg', IMG_LEAN = 'https://i.imgur.com/A9Sk0pO.jpeg';
+const IMG_OK = 'https://i.imgur.com/fxNyXoU.jpeg', IMG_BAD = 'https://i.imgur.com/DFAaqrC.jpeg', IMG_LEAN = 'https://i.imgur.com/gyMpZkq.png';
 const wrongImg = new Image(); wrongImg.src = IMG_BAD;
 const correctImg = new Image(); correctImg.src = IMG_OK;
 function showResult(ok, p) {
