@@ -269,9 +269,9 @@ html[data-mode=light] .subtitle,html[data-mode=light] .gate-foot{text-shadow:non
 
     <nav class="menu" id="menuDiff" aria-label="Select difficulty" hidden>
       <div class="menu-title">SELECT DIFFICULTY</div>
-      <button class="gbtn glass" data-action="diff" data-diff="easy"><span class="dot" style="--c:#00ff88"></span><span>EASY<small>SQUARE ROOTS</small></span></button>
-      <button class="gbtn glass" data-action="diff" data-diff="medium"><span class="dot" style="--c:#ffaa00"></span><span>MEDIUM<small>ADDING RADICALS</small></span></button>
-      <button class="gbtn glass" data-action="diff" data-diff="hard"><span class="dot" style="--c:#ff2244"></span><span>HARD<small>SIMPLIFY &amp; ADD RADICALS</small></span></button>
+      <button class="gbtn glass" data-action="diff" data-diff="easy"><span class="dot" style="--c:#00ff88"></span><span>EASY<small>SIMPLIFYING RADICAL EXPRESSIONS</small></span></button>
+      <button class="gbtn glass" data-action="diff" data-diff="medium"><span class="dot" style="--c:#ffaa00"></span><span>MEDIUM<small>BASIC ADDITION OF RADICAL EXPRESSIONS</small></span></button>
+      <button class="gbtn glass" data-action="diff" data-diff="hard"><span class="dot" style="--c:#ff2244"></span><span>HARD<small>SIMPLIFYING FIRST</small></span></button>
       <button class="gbtn glass back" data-action="back">BACK</button>
     </nav>
 
@@ -609,12 +609,12 @@ const mediumMain = [
   { q: "4√7 + 9√7 + 5√7", a: "18√7" },
   { q: "6√3 + 8√3 + 7√3", a: "21√3" }
 ];
-const hardTrial = [{ q: "√8 + √18", a: "5√2" }, { q: "√12 + √48", a: "6√3" }, { q: "√20 + √45", a: "5√5" }];
+const hardTrial = [[{ q: "√8 + √18", a: "5√2" }, { q: "√12 + √27", a: "5√3" }, { q: "√20 + √45", a: "5√5" }, { q: "√12 + √48", a: "6√3" }, { q: "√18 + √50", a: "8√2" }, { q: "√28 + √63", a: "5√7" }]];
 const hardMain = [{ q: "√28 + √63", a: "7√7" }, { q: "√18 + √32", a: "7√2" }, { q: "√75 + √12", a: "7√3" }, { q: "√80 + √45", a: "11√5" }, { q: "√98 + √8", a: "9√2" }, { q: "√125 + √20", a: "7√5" }, { q: "√147 + √12", a: "9√3" }, { q: "√108 + √48", a: "10√3" }, { q: "√200 + √32", a: "14√2" }, { q: "√162 + √18", a: "12√2" }];
 const toQ = list => list.map(o => Q(o.q, o.a));
 const BANKS = {
-  easy: {
-    trial: [4, 5, 6].map(root),
+ easy: {
+  trial: [4, 5, 6, 7, 8, 9].map(root),
     main: [7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28].map(root),
   },
   medium: { trial: toQ(mediumTrial), main: toQ(mediumMain) },
@@ -731,7 +731,7 @@ function showResult(ok, p) {
 }
 const board = $('#board'), bctx = board.getContext('2d');
 const COLS = 4, DX = 170, DY = 190, ZIG = 26;
-const DIFFS = { easy: { label: 'EASY', c: '#00ff88' }, medium: { label: 'MEDIUM', c: '#ffaa00' }, hard: { label: 'HARD', c: '#ff2244' } };
+const DIFFS = { : { label: 'EASY', c: '#00ff88' }, medium: { label: 'MEDIUM', c: '#ffaa00' }, hard: { label: 'HARD', c: '#ff2244' } };
 
 const G = {
   sid: 0, running: false, raf: 0, last: 0,
